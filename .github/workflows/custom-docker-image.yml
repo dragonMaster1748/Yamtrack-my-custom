@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout custom-release
+      - name: Checkout main
         uses: actions/checkout@v4
         with:
-          ref: custom-release
+          ref: main
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
