@@ -1,4 +1,4 @@
-name: Build Custom Yamtrack Image
+name: Build Yamtrack Main Image
 
 on:
   workflow_dispatch:
@@ -33,8 +33,8 @@ jobs:
         with:
           images: ghcr.io/${{ github.repository_owner }}/Yamtrack-my-custom-01
           tags: |
-            type=raw,value=custom-release
-            type=sha,prefix=custom-
+            type=raw,value=main
+            type=sha,prefix=main-
 
       - name: Build and push
         uses: docker/build-push-action@v6
